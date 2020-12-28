@@ -1,6 +1,6 @@
 {
      "name": "my-electron-app",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "your name",
     "description": "My Electron app",
     "main": "main.js",
