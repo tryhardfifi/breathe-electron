@@ -15,7 +15,6 @@
                    resizeCanvas(window.innerWidth, window.innerHeight);
                }
 
-       window.moveTo(0, 0)
        window.show = true
 
        function setup() {
