@@ -1,0 +1,87 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add electron-builder --dev
+
+PATH: 
+  /Users/filipeisho/.rvm/gems/ruby-2.6.2/bin:/Users/filipeisho/.rvm/gems/ruby-2.6.2@global/bin:/Users/filipeisho/.rvm/rubies/ruby-2.6.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/filipeisho/.rvm/gems/ruby-2.6.2/bin:/Users/filipeisho/.rvm/gems/ruby-2.6.2@global/bin:/Users/filipeisho/.rvm/rubies/ruby-2.6.2/bin:/Users/filipeisho/.cargo/bin:/Users/filipeisho/.rvm/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.16.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/filipeisho/my-electron-app/package.json: Unexpected string in JSON at position 207
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "my-electron-app",
+    "version": "0.1.0",
+    "author": "your name",
+    "description": "My Electron app",
+    "main": "main.js",
+    "scripts": {
+    "postinstall": "electron-builder install-app-deps"
+      "pack": "electron-builder --dir",
+      "dist": "electron-builder"
+    },
+    "dependencies": {
+      "electron-builder": "^22.9.1",
+      "electron-squirrel-startup": "^1.0.0"
+    },
+    "devDependencies": {
+      "@electron-forge/cli": "^6.0.0-beta.54",
+      "@electron-forge/maker-deb": "^6.0.0-beta.54",
+      "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+      "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+      "@electron-forge/maker-zip": "^6.0.0-beta.54",
+      "electron": "11.1.1"
+    },
+    "build": {
+      "appId": "your.id",
+      "mac": {
+        "category": "your.app.category.type"
+      }
+    },
+    "config": {
+      "forge": {
+        "packagerConfig": {},
+        "makers": [
+          {
+            "name": "@electron-forge/maker-squirrel",
+            "config": {
+              "name": "my_electron_app"
+            }
+          },
+          {
+            "name": "@electron-forge/maker-zip",
+            "platforms": [
+              "darwin"
+            ]
+          },
+          {
+            "name": "@electron-forge/maker-deb",
+            "config": {}
+          },
+          {
+            "name": "@electron-forge/maker-rpm",
+            "config": {}
+          }
+        ]
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

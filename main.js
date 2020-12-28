@@ -5,9 +5,8 @@ function createWindow () {
   const win = new BrowserWindow({
  width: 200,
     height: 200,
-    movable: false,
-    focusable: false,
     alwaysOnTop: true,
+    focusable: false,
     show: true,
     webPreferences: {
       nodeIntegration: true
@@ -18,9 +17,17 @@ win.setAlwaysOnTop(true, "floating", 1);
 win.setVisibleOnAllWorkspaces(true, {visibleOnFullScreen: true});
 win.setFullScreenable(false);
 win.loadFile('index.html')
-}
 
-app.whenReady().then(createWindow)
+     win.setFocusable(true)
+  }
+
+const init = () => {
+  /** Create app window */
+  createWindow();
+
+   
+};
+app.whenReady().then(init)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

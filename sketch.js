@@ -1,6 +1,5 @@
 
-
-var breathingIn = 3;
+ var breathingIn = 3;
                var breathingOut = 2;
                var secondHolding = 2;
                var trial = 4;
@@ -16,7 +15,8 @@ var breathingIn = 3;
                    resizeCanvas(window.innerWidth, window.innerHeight);
                }
 
-       window.moveTo(200, 220)
+       window.moveTo(0, 0)
+       window.show = true
 
        function setup() {
                       
@@ -52,21 +52,22 @@ var breathingIn = 3;
            breathingInColorPicker = createColorPicker(breathingInColor);
            breathingOutColorPicker = createColorPicker(breathingOutColor);
            holdingColorPicker = createColorPicker(holdingColor);
-           breathingInColorPicker.position(300, 0);
-           breathingOutColorPicker.position(300, 30);
-           holdingColorPicker.position(300, 60);
+           breathingInColorPicker.position(window.innerWidth/2, window.innerHeight/2);
+           breathingOutColorPicker.position(window.innerWidth/2, window.innerHeight/2 + 30);
+           holdingColorPicker.position(window.innerWidth/2, window.innerHeight/2 + 60);
            breathingInInput = createInput();
             breathingOutInput = createInput();
            trialInput = createInput();
            secondHoldingInput = createInput();
 
-           breathingInInput.position(415, 0);
+           breathingInInput.position(window.innerWidth/2+100, window.innerHeight/2);
+         
            breathingInInput.size(20, 10);
-         breathingOutInput.position(415, 30);
+         breathingOutInput.position(window.innerWidth/2+100, window.innerHeight/2 + 30);
            breathingOutInput.size(20, 10);
-         trialInput.position(415, 60);
+         trialInput.position(window.innerWidth/2+100, window.innerHeight/2+60);
            trialInput.size(20, 10);
-         secondHoldingInput.position(415, 90);
+         secondHoldingInput.position(window.innerWidth/2+100, window.innerHeight/2+90);
            secondHoldingInput.size(20, 10);
          breathingInInput.value(breathingIn)
             breathingOutInput.value(breathingOut)
@@ -120,7 +121,8 @@ function changeBG() {
     breathingInInput.show() 
     breathingOutInput.show() 
     trialInput.show() 
-    secondHoldingInput.show() 
+    secondHoldingInput.show()
+  
   }
    
   

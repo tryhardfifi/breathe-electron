@@ -5,6 +5,18 @@
     "description": "My Electron app",
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+
+ "pack": "electron-builder --dir",
+  "dist": "electron-builder"    },
+    "build": {
+  "appId": "your.id",
+  "mac": {
+    "category": "your.app.category.type"
+  }
+},
+    "devDependencies": {
+        "electron": "^11.1.1",
+        "electron-builder": "^22.9.1"
     }
 }
