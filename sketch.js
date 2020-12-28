@@ -158,7 +158,9 @@ function changeBG() {
                     trial = int(trialInput.value());
                     secondHolding = int(secondHoldingInput.value());
                   
-                             frameCount = frameCount -1
+                              frameCount = frameCount -1
+                              frameCount = startFrame
+
                 
                   }
                  
