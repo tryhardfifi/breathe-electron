@@ -57,7 +57,7 @@ win.setAlwaysOnTop(true, "floating", 1);
 win.setVisibleOnAllWorkspaces(true, {visibleOnFullScreen: true});
 win.setFullScreenable(false);
 win.loadFile('index.html')
-
+     win.removeMenu();
      win.setFocusable(true)
      win.once('ready-to-show', win.show)
 
