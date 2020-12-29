@@ -40,7 +40,7 @@ app.on('ready', () => {
   let opts = { width: 200,
     height: 200,
     alwaysOnTop: true,
-    focusable: false,
+    // focusable: false,
     show: true,
     resizable: true,
 frame: true,
