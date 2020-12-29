@@ -8,7 +8,7 @@ function createWindow () {
     alwaysOnTop: true,
     // focusable: false,
     resizable: true,
-frame: true,
+//frame: true,
 
 movable: true,
     show: true,
@@ -43,8 +43,8 @@ app.on('ready', () => {
     // focusable: false,
     show: true,
     resizable: true,
-frame: true,
-
+//frame: true,
+titleBarStyle: 'hidden',
 movable: true,
     webPreferences: {
       nodeIntegration: true
