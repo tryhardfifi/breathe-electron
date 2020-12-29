@@ -7,6 +7,8 @@ function createWindow () {
     height: 200,
     alwaysOnTop: true,
     focusable: false,
+    resizable: true,
+    movable: true,
     show: true,
     webPreferences: {
       nodeIntegration: true
