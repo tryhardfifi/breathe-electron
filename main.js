@@ -6,7 +6,7 @@ function createWindow () {
  width: 200,
     height: 200,
     alwaysOnTop: true,
-    focusable: false,
+    // focusable: false,
     resizable: true,
 frame: true,
 
@@ -42,6 +42,10 @@ app.on('ready', () => {
     alwaysOnTop: true,
     focusable: false,
     show: true,
+    resizable: true,
+frame: true,
+
+movable: true,
     webPreferences: {
       nodeIntegration: true
     }}
