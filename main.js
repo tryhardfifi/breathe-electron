@@ -8,7 +8,9 @@ function createWindow () {
     alwaysOnTop: true,
     focusable: false,
     resizable: true,
-    movable: true,
+frame: true,
+
+movable: true,
     show: true,
     webPreferences: {
       nodeIntegration: true
